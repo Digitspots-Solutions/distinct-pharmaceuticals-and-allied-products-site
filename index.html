@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distinct Pharmaceuticals and Allied Products - Your Trusted Partner in Quality Healthcare Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #081342;
+            --color-accent: #0051c2;
+            --color-bg: #EEF4FA;
+            --color-text: #061838;
+            --color-surface: #0b2d4a;
+            --color-secondary-accent: #1da15d;
+            --font-display: 'Titillium Web', sans-serif;
+            --font-body: 'IBM Plex Sans', sans-serif;
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text);
+            background-color: var(--color-bg);
+            line-height: 1.7;
+            position: relative;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: radial-gradient(circle, rgba(8, 19, 66, 0.02) 1px, transparent 1px);
+            background-size: 20px 20px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(238, 244, 250, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(8, 19, 66, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 4px;
+        }
+
+        .mobile-menu-btn span {
+            width: 25px;
+            height: 3px;
+            background: var(--color-text);
+            transition: all 0.3s ease;
+            transform-origin: center;
+        }
+
+        .mobile-menu-btn.active span:nth-child(1) {
+            transform: rotate(45deg) translate(6px, 6px);
+        }
+
+        .mobile-menu-btn.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-btn.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(6px, -6px);
+        }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            position: fixed;
+            top: 70px;
+            right: -100%;
+            width: 300px;
+            height: calc(100vh - 70px);
+            background: var(--color-bg);
+            box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+            transition: right 0.3s ease;
+            z-index: 999;
+            padding: 2rem;
+        }
+
+        .mobile-menu.active {
+            right: 0;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+        }
+
+        .mobile-menu ul li {
+            margin-bottom: 1.5rem;
+        }
+
+        .mobile-menu ul a {
+            text-decoration: none;
+            color: var(--color-text);
+            font-size: 1.1rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .mobile-menu ul a:hover {
+            color: var(--color-accent);
+        }
+
+        /* Animation Keyframes */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+
+        /* Hero Section */
+        #hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+            animation: fadeUp 0.6s ease forwards;
+        }
+
+        .hero-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.55);
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            color: #ffffff;
+            padding: 2rem;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-content .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 2rem;
+            color: #e3f2fd;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            max-width: 800px;
+            margin: 0 auto 2.5rem;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--color-accent);
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 81, 194, 0.3);
+        }
+
+        .cta-button:hover {
+            background: var(--color-secondary-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(29, 161, 93, 0.4);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        section h2 {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--color-primary);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        /* About Section */
+        #about {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.1s;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 40px rgba(8, 19, 66, 0.15);
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        /* Services Section */
+        #services {
+            background: #ffffff;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.2s;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: var(--color-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--color-accent);
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(8, 19, 66, 0.1);
+        }
+
+        .service-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--color-primary);
+            margin-bottom: 0.8rem;
+        }
+
+        .service-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Why Choose Us Section */
+        #why-choose-us {
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.3s;
+        }
+
+        .why-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .why-card {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 15px rgba(8, 19, 66, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 81, 194, 0.15);
+        }
+
+        .why-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--color-accent);
+            margin-bottom: 0.8rem;
+        }
+
+        .why-card p {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--color-surface);
+            color: #ffffff;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.4s;
+        }
+
+        #contact h2 {
+            color: #ffffff;
+        }
+
+        .contact-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-content p {
+            font-size: 1.1rem;
+            line-height: 1.9;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .contact-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-item h3 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: var(--color-secondary-accent);
+        }
+
+        .contact-item a {
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-item a:hover {
+            color: var(--color-secondary-accent);
+        }
+
+        .contact-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: #ffffff;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--color-primary);
+            color: #ffffff;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+            z-index: 2;
+            animation: fadeUp 0.6s ease forwards;
+            animation-delay: 0.5s;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            section {
+                padding: 60px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+            }
+
+            section {
+                padding: 48px 0;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .hero-content .tagline {
+                font-size: 1.1rem;
+            }
+
+            .hero-content p {
+                font-size: 1rem;
+            }
+
+            section h2 {
+                font-size: 2rem;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .about-image {
+                height: 350px;
+            }
+
+            .services-grid,
+            .why-cards,
+            .contact-info {
+                grid-template-columns: 1fr;
+            }
+
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Distinct Pharmaceuticals</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#why-choose-us">Why Choose Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#why-choose-us">Why Choose Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <img src="https://images.pexels.com/photos/8667531/pexels-photo-8667531.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Modern Nigerian pharmacy interior" class="hero-image">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Distinct Pharmaceuticals and Allied Products</h1>
+            <p class="tagline">Your Trusted Partner in Quality Healthcare Solutions</p>
+            <p>Welcome to Distinct Pharmaceuticals and Allied Products. We are your trusted partner in quality healthcare solutions, serving the Kosofe community with genuine pharmaceutical products and professional healthcare services. Located in the heart of Alapere, we are committed to your health and wellbeing.</p>
+            <a href="#contact" class="cta-button">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <img src="https://images.pexels.com/photos/31017118/pexels-photo-31017118.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Professional Nigerian pharmacy storefront" class="about-image">
+                <div class="about-text">
+                    <p>Distinct Pharmaceuticals and Allied Products is a premier pharmaceutical retail establishment located at 22, Ajibola Crescent, Alapere off Ketu, Lagos. We specialize in providing authentic, quality medications and healthcare products to individuals and families across Kosofe and the greater Lagos area. Our commitment to excellence, coupled with our knowledgeable team, ensures that every customer receives personalized attention and expert guidance for their healthcare needs. We maintain strict quality control standards and work only with certified suppliers to guarantee the authenticity and efficacy of every product we dispense.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Prescription Dispensing</h3>
+                    <p>Expert filling of prescriptions with thorough medication counseling and guidance on proper usage.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Over-the-Counter Medications</h3>
+                    <p>Wide selection of OTC drugs for common ailments including pain relief, cold and flu remedies, digestive aids, and more.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Medical Supplies and Equipment</h3>
+                    <p>Blood pressure monitors, glucometers, thermometers, first aid kits, and other essential medical devices.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Health and Wellness Products</h3>
+                    <p>Vitamins, supplements, herbal remedies, and nutritional products to support your overall health.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Personal Care Items</h3>
+                    <p>Quality toiletries, skincare products, baby care essentials, and hygiene products.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Pharmaceutical Consultation</h3>
+                    <p>Professional advice on medication interactions, side effects, and optimal treatment approaches.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Home Delivery Services</h3>
+                    <p>Convenient delivery of your medications and healthcare products within Kosofe and surrounding areas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section id="why-choose-us">
+        <div class="container">
+            <h2>Why Choose Distinct Pharmaceuticals</h2>
+            <div class="why-cards">
+                <div class="why-card">
+                    <h3>Authentic Products</h3>
+                    <p>We guarantee 100% genuine medications sourced directly from certified manufacturers and authorized distributors.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Expert Guidance</h3>
+                    <p>Our qualified pharmaceutical professionals provide accurate information and personalized healthcare advice.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Convenient Location</h3>
+                    <p>Easily accessible location at Alapere off Ketu, serving the entire Kosofe community.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Competitive Pricing</h3>
+                    <p>Fair, transparent pricing on all products with regular special offers and discounts.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Customer-Centric Service</h3>
+                    <p>We prioritize your health and satisfaction, building lasting relationships with every customer.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Quality Assurance</h3>
+                    <p>Strict adherence to pharmaceutical standards and proper storage conditions for all medications.</p>
+                </div>
+                <div class="why-card">
+                    <h3>Quick Service</h3>
+                    <p>Efficient prescription processing and minimal waiting time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Visit Us Today</h2>
+                <p>Your health is our priority. Visit Distinct Pharmaceuticals and Allied Products for all your medication and healthcare needs. Our friendly, knowledgeable team is ready to serve you with professional care and expert guidance.</p>
+                <p>Whether you need to fill a prescription, seek pharmaceutical advice, or purchase healthcare products, we are here for you. We look forward to being your trusted healthcare partner in the Kosofe community.</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h3>Phone</h3>
+                        <p><a href="tel:+2349017856431">+234 901 785 6431</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto:info@distinctpharmaceuticals.com.ng">info@distinctpharmaceuticals.com.ng</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <h3>Address</h3>
+                        <p>22, Ajibola Crescent, Alapere off Ketu, Kosofe, Lagos, Nigeria</p>
+                    </div>
+                </div>
+                <div style="margin-top: 2.5rem;">
+                    <a href="https://wa.me/2349017856431" class="cta-button">Chat on WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Distinct Pharmaceuticals and Allied Products. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/2349017856431" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.825.741 5.601 2.156 8.063L.05 31.95l8.063-2.106A15.927 15.927 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0zm0 29.333c-2.447 0-4.854-.673-6.938-1.948l-.5-.292-5.146 1.344 1.375-5.021-.323-.521A13.235 13.235 0 012.667 16c0-7.364 5.969-13.333 13.333-13.333S29.333 8.636 29.333 16 23.364 29.333 16 29.333z" fill="currentColor"/>
+            <path d="M23.146 19.167c-.365-.188-2.167-1.073-2.5-1.198-.333-.125-.583-.188-.833.188-.25.365-.958 1.198-1.167 1.448-.208.25-.417.281-.781.094-.365-.188-1.542-.573-2.938-1.823-1.083-.969-1.813-2.167-2.021-2.531-.208-.365-.021-.563.167-.75.167-.167.365-.438.552-.656.188-.219.25-.375.375-.625.125-.25.062-.469-.031-.656-.094-.188-.833-2.011-1.146-2.76-.302-.729-.604-.625-.833-.635-.208-.01-.448-.01-.688-.01s-.625.094-.958.469c-.333.375-1.25 1.229-1.25 2.99 0 1.761 1.281 3.469 1.458 3.708.177.24 2.521 3.875 6.125 5.417.854.365 1.521.583 2.042.75.854.271 1.635.229 2.25.135.687-.104 2.167-.885 2.469-1.74.302-.854.302-1.583.208-1.74-.094-.146-.344-.229-.708-.417z" fill="currentColor"/>
+        </svg>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenuBtn.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenuBtn.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        }
+    </script>
+</body>
+</html>
