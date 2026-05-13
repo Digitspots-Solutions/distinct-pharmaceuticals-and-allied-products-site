@@ -1,0 +1,49 @@
+{
+  "businessName": "Distinct Pharmaceuticals and Allied Products",
+  "industry": "Pharmaceutical Retail",
+  "tone": "formal, trustworthy, professional",
+  "tagline": "Your Trusted Partner in Quality Healthcare Solutions",
+  "sections": [
+    {
+      "id": "hero",
+      "name": "Hero Section",
+      "copy": "Welcome to Distinct Pharmaceuticals and Allied Products. We are your trusted partner in quality healthcare solutions, serving the Kosofe community with genuine pharmaceutical products and professional healthcare services. Located in the heart of Alapere, we are committed to your health and wellbeing.",
+      "imagePrompt": "Modern Nigerian pharmacy interior with clean white shelves stocked with organized pharmaceutical products, bright LED lighting, professional healthcare setting, Nigerian pharmacist in white coat attending to customers, warm welcoming atmosphere, Lagos healthcare facility, photorealistic, high quality",
+      "layout": "centered"
+    },
+    {
+      "id": "about",
+      "name": "About Us",
+      "copy": "Distinct Pharmaceuticals and Allied Products is a premier pharmaceutical retail establishment located at 22, Ajibola Crescent, Alapere off Ketu, Lagos. We specialize in providing authentic, quality medications and healthcare products to individuals and families across Kosofe and the greater Lagos area. Our commitment to excellence, coupled with our knowledgeable team, ensures that every customer receives personalized attention and expert guidance for their healthcare needs. We maintain strict quality control standards and work only with certified suppliers to guarantee the authenticity and efficacy of every product we dispense.",
+      "imagePrompt": "Professional Nigerian pharmacy storefront in Lagos neighborhood, clean modern facade with green cross signage, well-organized display windows showing healthcare products, bustling Lagos street scene, daytime photography, photorealistic, welcoming community pharmacy",
+      "layout": "split"
+    },
+    {
+      "id": "services",
+      "name": "Our Services",
+      "copy": "At Distinct Pharmaceuticals and Allied Products, we offer comprehensive pharmaceutical services tailored to meet your healthcare needs:\n\n**Prescription Dispensing**: Expert filling of prescriptions with thorough medication counseling and guidance on proper usage.\n\n**Over-the-Counter Medications**: Wide selection of OTC drugs for common ailments including pain relief, cold and flu remedies, digestive aids, and more.\n\n**Medical Supplies and Equipment**: Blood pressure monitors, glucometers, thermometers, first aid kits, and other essential medical devices.\n\n**Health and Wellness Products**: Vitamins, supplements, herbal remedies, and nutritional products to support your overall health.\n\n**Personal Care Items**: Quality toiletries, skincare products, baby care essentials, and hygiene products.\n\n**Pharmaceutical Consultation**: Professional advice on medication interactions, side effects, and optimal treatment approaches.\n\n**Home Delivery Services**: Convenient delivery of your medications and healthcare products within Kosofe and surrounding areas.",
+      "imagePrompt": "Grid layout of Nigerian pharmacy services, close-up shots of pharmacist hands counting pills, blood pressure check being performed, shelves of vitamins and supplements, medical equipment displayed, prescription bottles being labeled, all in modern clean pharmacy setting, photorealistic, professional healthcare imagery",
+      "layout": "grid"
+    },
+    {
+      "id": "why-choose-us",
+      "name": "Why Choose Distinct Pharmaceuticals",
+      "copy": "**Authentic Products**: We guarantee 100% genuine medications sourced directly from certified manufacturers and authorized distributors.\n\n**Expert Guidance**: Our qualified pharmaceutical professionals provide accurate information and personalized healthcare advice.\n\n**Convenient Location**: Easily accessible location at Alapere off Ketu, serving the entire Kosofe community.\n\n**Competitive Pricing**: Fair, transparent pricing on all products with regular special offers and discounts.\n\n**Customer-Centric Service**: We prioritize your health and satisfaction, building lasting relationships with every customer.\n\n**Quality Assurance**: Strict adherence to pharmaceutical standards and proper storage conditions for all medications.\n\n**Quick Service**: Efficient prescription processing and minimal waiting time.",
+      "imagePrompt": "Collage of trust elements in Nigerian pharmacy context: close-up of quality certification badges, satisfied Nigerian customers receiving consultation from pharmacist, modern refrigerated medicine storage units, clean organized pharmacy counter, friendly staff interactions, Lagos healthcare professionalism, photorealistic",
+      "layout": "cards"
+    },
+    {
+      "id": "contact",
+      "name": "Visit Us Today",
+      "copy": "Your health is our priority. Visit Distinct Pharmaceuticals and Allied Products for all your medication and healthcare needs. Our friendly, knowledgeable team is ready to serve you with professional care and expert guidance.\n\nWhether you need to fill a prescription, seek pharmaceutical advice, or purchase healthcare products, we are here for you. We look forward to being your trusted healthcare partner in the Kosofe community.",
+      "imagePrompt": "Welcoming Nigerian pharmacy storefront exterior at golden hour, clear address signage visible, 22 Ajibola Crescent location, clean modern building facade, green cross pharmacy symbol, Lagos neighborhood setting, inviting entrance with glass doors, photorealistic, warm lighting",
+      "layout": "centered"
+    }
+  ],
+  "contact": {
+    "phone": "+234 901 785 6431",
+    "email": "info@distinctpharmaceuticals.com.ng",
+    "address": "22, Ajibola Crescent, Alapere off Ketu, Kosofe, Lagos, Nigeria",
+    "whatsapp": "https://wa.me/2349017856431"
+  }
+}
